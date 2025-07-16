@@ -51,6 +51,9 @@ h1 {
 }
 
 .theme-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   margin-top: 20px;
   padding: 10px 20px;
   border-radius: 10px;
@@ -135,7 +138,8 @@ footer {
 
 .video-container iframe {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: none;
@@ -208,6 +212,7 @@ body.light-mode footer {
 body.light-mode .video-container {
   box-shadow: 0 0 20px #aaa;
 }
+
 footer a {
   margin: 0 10px;
   color: #00f7ff;
@@ -219,6 +224,7 @@ footer a:hover {
   color: #fff;
   transform: scale(1.3);
 }
+
 #feedback input,
 #feedback textarea {
   width: 80%;
