@@ -18,7 +18,7 @@ function showTab(tabId, event) {
   event.target.classList.add('active');
 }
 
-// ✅ This must be OUTSIDE showTab function
+
 function toggleTheme() {
   document.body.classList.toggle('light-mode');
   console.log("Theme toggled!");
