@@ -157,9 +157,7 @@ footer {
   }
 }
 
-/* =============================
-   ✅ Light Mode Overrides
-   ============================= */
+
 body.light-mode {
   background: linear-gradient(to right, #e2e2e2, #ffffff);
   color: #000;
