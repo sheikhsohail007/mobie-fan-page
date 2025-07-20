@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css" />
+ <style>
+  body {
+    background-color: #000; /* Dark theme */
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .top-nav {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    box-shadow: 0 0 20px #00ffff77;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .nav-btn {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #00ffff;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-btn:hover {
+    background-color: #02c2c2;
+  }
+
+  .movie-detail {
+    padding: 30px;
+    max-width: 900px;
+    margin: 50px auto;
+    background: #111;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 0 20px #00fff2a8;
+  }
+
+  .movie-detail h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff88;
+  }
+
+  .movie-detail img {
+    display: block;
+    max-width: 300px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00ffff66;
+  }
+
+  .movie-detail p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .movie-detail strong {
+    color: #00ffff;
+  }
+
+  .download-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    background-color: #00ffff;
+    color: #000;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .download-btn:hover {
+    background-color: #02c2c2;
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- 🔻 Navigation Buttons -->
+  <div class="top-nav">
+  <button onclick="goHome()">Home</button>
+  <button onclick="showComingSoon('Dual Audio')">Dual Audio</button>
+  <button onclick="showComingSoon('Web Series')">Web Series</button>
+  <button onclick="showComingSoon('720p')">720p</button>
+  <button onclick="showComingSoon('1080p')">1080p</button>
+  <button onclick="showComingSoon('4K')">4K</button>
+  <button onclick="location.href='index.html#feedback'">Feedback</button>
+</div>
+
+
+  <!-- 🔻 Movie Detail Section -->
+  <div class="movie-detail" id="movie-detail">
+    <!-- JavaScript will inject movie data here -->
+  </div>
+
+  <script src="movie-data.js"></script>
+  <script src="movie-details.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieId = urlParams.get('id');
+
+    const movie = movies.find(m => m.id === movieId);
+
+    const container = document.getElementById('movie-detail');
+
+    if (movie) {
+      container.innerHTML = `
+        <h1>${movie.title}</h1>
+        <img src="${movie.image}" alt="${movie.title}">
+        <p><strong>Genre:</strong> ${movie.genre}</p>
+        <p><strong>Quality:</strong> ${movie.quality}</p>
+        <p><strong>Release Date:</strong> ${movie.date}</p>
+        <p><strong>Description:</strong> ${movie.description}</p>
+        <a class="download-btn" href="${movie.download}" target="_blank">⬇️ Download Movie</a>
+      `;
+    } else {
+      container.innerHTML = `<h1>Movie Not Found</h1>`;
+    }
+
+
+    
+  function showComingSoon(feature) {
+    alert(`⚠️ Sorry, "${feature}" abhi working position mein hain.`);
+  }
+
+  function goHome() {
+    window.location.href = "index.html";
+  }
+
+
+  </script>
+
+</body>
+</html>
