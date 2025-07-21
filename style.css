@@ -839,6 +839,9 @@ footer a:hover {
   color: #fff;
 }
 
+
+
+
 .top-nav {
   display: flex;
   justify-content: center;
@@ -871,3 +874,69 @@ footer a:hover {
   transform: scale(1.05);
 }
 
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+.nav-buttons button {
+  padding: 10px 16px;
+  background: #0e0e0e;
+  color: #0ff;
+  font-family: 'Consolas', monospace;
+  font-size: 15px;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #0ff, inset 0 0 8px #0ff;
+}
+
+.nav-buttons button:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 18px #0ff, 0 0 10px #0ff;
+}
+
+
+.site-footer {
+  text-align: center;
+  padding: 30px 15px;
+  background: #000;
+  color: #ccc;
+  font-family: 'Orbitron', sans-serif;
+  border-top: 2px solid #0ff;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #00ffff;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #00ffff;
+}
+
+.footer-tagline,
+.footer-tech {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #aaa;
+}
